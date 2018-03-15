@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D6C4B2C205A0EF200181526 /* AFFAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6C4B2B205A0EF200181526 /* AFFAlertViewController.m */; };
 		71C129BF1E2DF5E1000F4030 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C129BE1E2DF5E1000F4030 /* main.m */; };
 		71C129C21E2DF5E1000F4030 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C129C11E2DF5E1000F4030 /* AppDelegate.m */; };
 		71C129C51E2DF5E1000F4030 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C129C41E2DF5E1000F4030 /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D6C4B2A205A0EF200181526 /* AFFAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFFAlertViewController.h; sourceTree = "<group>"; };
+		2D6C4B2B205A0EF200181526 /* AFFAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFFAlertViewController.m; sourceTree = "<group>"; };
 		71C129BA1E2DF5E1000F4030 /* AFFAlertView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFFAlertView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71C129BE1E2DF5E1000F4030 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		71C129C01E2DF5E1000F4030 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 				71C129CB1E2DF5E1000F4030 /* LaunchScreen.storyboard */,
 				71C129CE1E2DF5E1000F4030 /* Info.plist */,
 				71C129BD1E2DF5E1000F4030 /* Supporting Files */,
+				2D6C4B2A205A0EF200181526 /* AFFAlertViewController.h */,
+				2D6C4B2B205A0EF200181526 /* AFFAlertViewController.m */,
 			);
 			path = AFFAlertView;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				71C129C51E2DF5E1000F4030 /* ViewController.m in Sources */,
 				71C129C21E2DF5E1000F4030 /* AppDelegate.m in Sources */,
 				71C129BF1E2DF5E1000F4030 /* main.m in Sources */,
+				2D6C4B2C205A0EF200181526 /* AFFAlertViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +513,7 @@
 				71C129E91E2DF5E1000F4030 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		71C129EA1E2DF5E1000F4030 /* Build configuration list for PBXNativeTarget "AFFAlertViewTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +522,7 @@
 				71C129EC1E2DF5E1000F4030 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		71C129ED1E2DF5E1000F4030 /* Build configuration list for PBXNativeTarget "AFFAlertViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +531,7 @@
 				71C129EF1E2DF5E1000F4030 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
