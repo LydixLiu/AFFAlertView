@@ -28,6 +28,8 @@
 
 @property (nonatomic, weak) UIViewController *showingVC;
 
+@property (nonatomic, weak) UIView *alertContentView;
+
 @end
 
 @implementation AFFAlertViewController
@@ -41,7 +43,7 @@
 + (AFFAlertViewController *)alertWithtitle:(NSString *)title
                                     detail:(NSString *)detail
                               cancelButton:(NSString *)ccBtnTitle
-                             comfirmButton:(NSString *)cfmBtnTitle
+                             comfirmButton:(nonnull NSString *)cfmBtnTitle
                               otherButtons:(NSArray<NSString *> *)others
                                      block:(alertBlock)block {
     return [[self alloc] initWithtitle:title detail:detail cancelButton:ccBtnTitle comfirmButton:cfmBtnTitle otherButtons:others block:block];
@@ -65,7 +67,37 @@
 }
 
 - (void)setup {
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 260, 50)];
+    view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:view];
+    self.alertContentView = view;
     
+    CGFloat height = 0;
+    
+    if (self.alertTitle.length > 0) {
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, height, 260, 20)];
+        label.textColor = [UIColor blackColor];
+        label.font = [UIFont systemFontOfSize:14];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.text = self.alertTitle;
+        [view addSubview:label];
+        
+        height += 20;
+    }
+    if (self.detail.length > 0) {
+        CGSize size = [self.detail sizeWithFont:[UIFont systemFontOfSize:13] forWidth:230 lineBreakMode:NSLineBreakByWordWrapping];
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, height, 230, size.height)];
+        label.numberOfLines = 0;
+        label.textColor = [UIColor grayColor];
+        label.font = [UIFont systemFontOfSize:13];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.lineBreakMode = NSLineBreakByWordWrapping;
+        label.text = self.detail;
+        [view addSubview:label];
+        
+        height += size.height;
+    }
 }
 
 - (void)showInMainWindow {
