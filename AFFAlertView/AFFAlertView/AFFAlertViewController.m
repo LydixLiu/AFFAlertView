@@ -102,12 +102,13 @@
         } completion:^(BOOL finished) {
             [self.view removeFromSuperview];
             [self removeFromParentViewController];
-        }]; 
+        }];
     } else {
         [UIView animateWithDuration:0.2 animations:^{
             self.view.alpha = 0;
         } completion:^(BOOL finished) {
             [self.view removeFromSuperview];
+            
             objc_setAssociatedObject(_window, key_vc, nil, OBJC_ASSOCIATION_RETAIN);
         }];
     }
