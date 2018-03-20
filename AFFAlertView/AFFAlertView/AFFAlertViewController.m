@@ -98,6 +98,10 @@
         
         height += size.height;
     }
+    BOOL hasMore = self.otherButtonTitles.count > 0;
+    if (hasMore) {
+        
+    }
 }
 
 - (void)showInMainWindow {
